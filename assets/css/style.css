@@ -329,19 +329,106 @@ body{
 
 .section-games{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.box-post-games{
+    background-color: white;
+    color: black;
+
+    height: 70vh;
+    width: 50%;
+
+    border-radius: 20px;
+
+    margin: 0 auto;
+    padding: 20px;
+}
+.box-post-games-title{
+    font-size: 60px;
+}
+
+.box-post-games button{
+    background-color: rgb(154, 106, 244);
+    color: white;
+
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    
+    padding: 10px 20px;
+    margin: 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.box-post-games button:hover{
+    background-color: rgb(140, 0, 255);
+    box-shadow: 0 2px 10px rgb(246, 246, 246);
 }
 
 .box-games{
     background-color: white;
     color: black;
 
+    border-radius: 20px;
+
     height: 70vh;
-    width: 90%;
+    width: 30%;
 
     margin: 0 auto;
+    padding: 20px;
+}
+
+.box-games-title{
+    font-size: 60px;
+}
+
+.games{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.games button{
+    background-color: rgb(154, 106, 244);
+    color: white;
+
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 15px;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.games button:hover{
+    background-color: rgb(140, 0, 255);
+    box-shadow: 0 2px 10px rgb(246, 246, 246);
+}
+
+.games img{
+    width: 20%;
+}
+
+.controllers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
@@ -353,6 +440,7 @@ body{
     background-color: rgb(18, 18, 18);
     font-size: 20px;
     padding: 10px 15px;
+    margin: 0px 10px;
 
     border-radius: 100%;
     border: solid 3px rgb(57, 56, 56);
@@ -402,7 +490,7 @@ body{
 }
 .autor-copyright p {
     font-size: 20px;
-    color: rgb(255, 249, 249);
+    color: rgb(192, 110, 255);
     margin-top: 20px;
 }
 

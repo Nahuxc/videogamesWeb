@@ -1,4 +1,6 @@
-<div class="box-controllers">
+        <div class="box-controllers">
+
+                <!-- contendor de los botones -->
                 <div class="controllers">
                     <button class="btnJoystick c">□</button><span> Crear Categoria</span>
                     <button class="btnJoystick t">△</button><span> Crear Entradas</span>

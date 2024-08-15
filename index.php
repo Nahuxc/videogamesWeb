@@ -17,12 +17,12 @@
     <?php require_once "includes/navbar.php"?>
 
     <main>
+        
         <!-- home -->
         <?php require_once "includes/home.php"?>
 
         <!-- section de formularios -->
         <?php require_once "includes/sectionForms.php"?>
-
 
         <!-- section de videojuegos y controles para el usuario -->
         <!-- <?php require_once "includes/sectionGames.php" ?> -->
