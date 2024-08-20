@@ -13,5 +13,8 @@ $con = mysqli_connect($server, $username, $password, $database);
 /* inicializacion, hacemos que sea todo utf8 para que permita todos los caracteres */
 mysqli_query($con, "SET NAMES 'utf8' ");
 
+/* iniciar la sesion */
+session_start();
+
 
 ?>

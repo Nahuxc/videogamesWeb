@@ -1,3 +1,5 @@
+<?php require_once "helpers.php"?>
+
 <!-- section forms -->
 <section id="home-forms" class="home-forms">
 

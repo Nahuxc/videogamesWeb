@@ -1,3 +1,5 @@
+
+
 <header class="header">
         <nav class="nav">
             <!-- logo -->
@@ -14,7 +16,6 @@
                 <li>category</li>
                 <li>about us</li>
                 <li>contact</li>
-                <li>Jorgito1234</li>
             </ul>
         </nav>
     </header>

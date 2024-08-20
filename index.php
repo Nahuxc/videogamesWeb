@@ -1,3 +1,6 @@
+<!-- conexion a la db -->
+<?php require_once "./db/connection.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
     <?php require_once "includes/navbar.php"?>
 
     <main>
-        
+
         <!-- home -->
         <?php require_once "includes/home.php"?>
 
@@ -25,7 +28,7 @@
         <?php require_once "includes/sectionForms.php"?>
 
         <!-- section de videojuegos y controles para el usuario -->
-        <!-- <?php require_once "includes/sectionGames.php" ?> -->
+        <?php/*  require_once "includes/sectionGames.php" */ ?>
     </main>
 
     <!-- footer -->
@@ -36,5 +39,3 @@
 <script src="./assets/js/index.js"></script>
 </html>
 
-<!-- conexion a la db -->
-<?php require_once "./db/connection.php" ?>

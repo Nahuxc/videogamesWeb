@@ -45,5 +45,4 @@
                 <!-- btn ver mas -->
                 <button>Ver todos los posteos</button>
             </div>
-            
         </section>
