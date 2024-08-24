@@ -1,4 +1,4 @@
-<?php require_once "helpers.php" ?>
+<?php require_once "helpers/helpers.php" ?>
 <!-- section home -->
 <?php echo isset($_SESSION["errors"]) ?  alertErrorSpam() : ""; ?>
 <section id="home" class="home">

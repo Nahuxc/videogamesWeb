@@ -12,7 +12,7 @@
                 <hr>
 
                 <!-- formulario -->
-                <form action="./signup.php" method="POST" class="form-signup" >
+                <form action="includes/signup.php" method="POST" class="form-signup" >
                     <label>Name:</label>
                     <input placeholder="Name" name="name" type="text">
                     <?php echo isset($_SESSION["errors"]) ?  showError($_SESSION["errors"], "name") : ""; ?>

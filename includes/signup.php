@@ -1,7 +1,7 @@
 <?php
 
 /* conexion a la db */
-require_once "./db/connection.php";
+require_once "../db/connection.php";
 
 /* iniciamos la sesion */
 
@@ -94,11 +94,11 @@ if(isset($_POST)){
 
     }else{
         $_SESSION["errors"] = $errors;
-        header("Location:index.php");
+        header("Location:../index.php");
     }
 
 
-    header("Location:index.php");
+    header("Location:../index.php");
 
 }
 
