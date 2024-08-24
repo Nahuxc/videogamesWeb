@@ -93,6 +93,9 @@ body{
 
     top: 200px;
     position: absolute;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .wave{
@@ -101,7 +104,9 @@ body{
 }
 
 .border{
-
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 15vmin;
     color: #e6e3e3;
     top: 200px;
@@ -504,8 +509,11 @@ body{
 }
 .autor-copyright p {
     font-size: 20px;
-    color: rgb(192, 110, 255);
+    color: rgb(213, 169, 246);
     margin-top: 20px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 

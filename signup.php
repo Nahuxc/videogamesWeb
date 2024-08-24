@@ -1,16 +1,27 @@
 <?php
 
-session_start();
+/* conexion a la db */
+require_once "./db/connection.php";
+
+/* iniciamos la sesion */
+
+if(!isset($_SESSION)){
+    session_start();
+}
+
 
 if(isset($_POST)){
-    /* obtener datos del formulario */
-    $name = isset($_POST["name"]) ? $_POST["name"] : false;
 
-    $surname = isset($_POST["surname"]) ? $_POST["surname"] : false;
 
-    $email = isset($_POST["email"]) ? $_POST["email"] : false;
+    /* obtener datos del formulario y verificar con la funcion de mysql los string */
 
-    $password = isset($_POST["password"]) ? $_POST["password"] : false;
+    $name = isset($_POST["name"]) ? mysqli_real_escape_string($con, $_POST["name"]) : false;
+
+    $surname = isset($_POST["surname"]) ? mysqli_real_escape_string($con, $_POST["surname"]) : false;
+
+    $email = isset($_POST["email"]) ? mysqli_real_escape_string($con, $_POST["email"]) : false;
+
+    $password = isset($_POST["password"]) ? mysqli_real_escape_string($con, $_POST["password"]) : false;
 
 
     /* array de errores */
@@ -54,8 +65,32 @@ if(isset($_POST)){
     $save_user = false;
 
     if(count($errors) == 0){
-        /* insertar usuario en la db en la tabla que corresponda */
+
         $save_user = true;
+
+        /* cifrar la contraseña */
+        $password_segurity = password_hash($password, PASSWORD_BCRYPT, ["cost"=>4]);
+
+
+
+        /* insertar usuario en la db en la tabla que corresponda */
+        $sql =  "INSERT INTO users VALUES(null, '$name','$surname', '$email', '$password_segurity', curdate()); ";
+
+
+        /* pasar los valores de la conexion y la consulta */
+        $querySave = mysqli_query($con, $sql );
+
+
+        /* verificacion de que existen los datos y se registraron correctamente */
+        if($querySave){
+            $_SESSION["complete"] = "el registro se ha completado con exito";
+        }else{
+            $_SESSION["errors"]["general"] = "fallo al guardar el usuario";
+        }
+
+
+
+
 
     }else{
         $_SESSION["errors"] = $errors;
@@ -63,7 +98,10 @@ if(isset($_POST)){
     }
 
 
+    header("Location:index.php");
+
 }
+
 
 
 ?>

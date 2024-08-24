@@ -22,10 +22,19 @@ function alertErrorSpam(){
 
 
 function deleteErrors(){
+
+
+
     if(isset($_SESSION["errors"])){
         $_SESSION["errors"] = null;
         session_unset();
     }
+
+    if(isset($_SESSION["complete"])){
+        $_SESSION["completado"] = null;
+        session_unset();
+    }
+
 }
 
 
