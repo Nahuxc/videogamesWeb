@@ -20,23 +20,31 @@
 </head>
 <body>
     <!-- navbar -->
-    <?php require_once "includes/view/navbar.php"?>
+    <?php require_once "includes/navbar.php"?>
 
     <main>
 
-        <!-- home -->
-        <?php require_once "includes/home/home.php"?>
+        <?php if(isset($_SESSION["user"])) :?>
 
-        <!-- section de formularios -->
-        <?php require_once "includes/users/sectionForms.php"?>
+            <!-- section de videojuegos y controles para el usuario -->
+            <?php  require_once "includes/sectGames/sectionGames.php" ?>
 
-        <!-- section de videojuegos y controles para el usuario -->
-        <?php/*  require_once "includes/sectionGames.php" */ ?>
+            <?php else :?>
+
+                <!-- home -->
+                <?php require_once "includes/home/home.php"?>
+
+                <!-- section de formularios -->
+                <?php require_once "includes/users/sectionForms.php"?>
+
+        <?php endif;?>
+
+
     </main>
 
     <!-- footer -->
     <footer class='autor-copyright'>
-        <?php require_once "includes/view/footer.php"?>
+        <?php require_once "includes/footer.php"?>
     </footer>
 </body>
 <script src="./assets/js/index.js"></script>

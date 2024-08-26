@@ -10,11 +10,11 @@
                 <hr>
 
                 <!-- formulario  -->
-                <form class="form-login">
+                <form action="includes/login.php" method="POST" class="form-login">
                     <label>email:</label>
                     <input placeholder="Email" name="email" type="email">
                     <label>Password: </label>
                     <input placeholder="Password" name="password" type="password">
-                    <input class="btn-submit" value="Login" type="submit">
+                    <input class="btn-submit" name="loginSubmit" value="Login" type="submit">
                 </form>
             </div>

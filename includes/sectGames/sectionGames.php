@@ -1,13 +1,17 @@
 
+
 <!-- sidebar de botones -->
 <?php require_once "controllerSidebar.php"?>
 
 <!-- seccion de posteos -->
 <section class="section-games">
             <div class="box-post-games">
-                <!-- titulo del contenedor -->
-                <h2 class="box-post-games-title">Ultimos Posteos</h2>
 
+                <!-- titulo del contenedor -->
+                <h3 class="box-post-games-title">Ultimos Posteos</h3>
+                <?php if(isset($_SESSION["user"])) :?>
+                <h2 class="title-user" >Bienvenido, <?= $_SESSION["user"]["name"] ?> </h2>
+                <?php endif;?>
                 <!-- cards -->
                 <div class="card-games">
                     <h2>God of War</h2>

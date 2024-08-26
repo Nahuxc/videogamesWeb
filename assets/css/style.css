@@ -29,11 +29,18 @@ body{
     width: 100%;
 }
 
+.box-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
 .search{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 
-    width: 40%;
+    width: 90%;
     height: 30px;
 
     padding: 15px 10px;
@@ -63,6 +70,11 @@ body{
 .nav-list li a{
     text-decoration: none;
     color: white;
+}
+
+.login-active{
+    color: rgb(246, 191, 246);
+    text-shadow: 0 0 10px rgb(154, 106, 244);
 }
 
 
@@ -365,8 +377,15 @@ body{
     margin: 0 auto;
     padding: 20px;
 }
+
+
 .box-post-games-title{
     font-size: 60px;
+}
+
+
+.title-user{
+    color: rgb(154, 106, 244);
 }
 
 .box-post-games button{
