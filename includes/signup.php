@@ -84,6 +84,13 @@ if(isset($_POST)){
         /* verificacion de que existen los datos y se registraron correctamente */
         if($querySave){
             $_SESSION["complete"] = "el registro se ha completado con exito";
+            $sql = "SELECT * FROM users WHERE name = '$name' ";
+            $register = mysqli_query($con, $sql);
+
+            $user = mysqli_fetch_assoc($register);
+
+            $_SESSION["user"] = $user;
+
         }else{
             $_SESSION["errors"]["general"] = "fallo al guardar el usuario";
         }
@@ -97,7 +104,7 @@ if(isset($_POST)){
         header("Location:../index.php");
     }
 
-
+    
     header("Location:../index.php");
 
 }

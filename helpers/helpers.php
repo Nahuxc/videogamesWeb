@@ -32,6 +32,24 @@ function getCategory($con){
 }
 
 
+/* obtener inputs */
+
+function getInputs($con){
+    $sql = "SELECT i.*, c.name as 'category', u.name as 'username' FROM inputs i INNER JOIN category c ON i.category_id = c.id INNER JOIN users u ON i.user_id = u.id";
+
+    $inputs = mysqli_query($con, $sql);
+
+    $result = array();
+
+    if($inputs && mysqli_num_rows($inputs) >= 1){
+        $result = $inputs;
+        return $result;
+    }
+
+
+}
+
+
 
 function alertErrorSpam(){
     $alertSpam = "";
@@ -54,7 +72,7 @@ function deleteErrors(){
     }
 
     if(isset($_SESSION["complete"])){
-        $_SESSION["completado"] = null;
+        $_SESSION["complete"] = null;
         session_unset();
     }
 

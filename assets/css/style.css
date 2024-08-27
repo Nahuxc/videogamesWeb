@@ -64,7 +64,7 @@ body{
 
 .nav-list .nav-list-navigation{
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0px 10px;
 }
 
@@ -72,7 +72,7 @@ body{
     color: white;
     border: none;
     background: none;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "New Amsterdam", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -87,8 +87,8 @@ body{
 }
 
 .login-active{
-    color: rgb(246, 191, 246);
-    text-shadow: 0 0 10px rgb(154, 106, 244);
+    color: rgb(164, 126, 252);
+    text-shadow: 0 0 10px rgb(90, 63, 246);
 }
 
 
@@ -121,7 +121,6 @@ body{
 
     box-shadow: 0 0 5px rgb(121, 120, 120);
     cursor: pointer;
-    transition: all 400ms;
 }
 
 .nav-list_category a:hover{
@@ -415,6 +414,7 @@ body{
 
 .section-games{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -454,12 +454,30 @@ body{
 
 .card-games-post{
     font-size: 20px;
-    width: 80%;
+    width: 60%;
 }
+
+.card-games-post p{
+    color: rgb(80, 79, 79);
+}
+
+.card-games-post span{
+    color: rgb(133, 12, 190);
+}
+
 .card-games-user{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 20%;
     text-align: center;
     font-size: 30px;
+}
+
+.card-games-user i{
+    color: rgb(90, 63, 246);
 }
 
 .title-user{
@@ -558,6 +576,7 @@ body{
 /* sidebar Controllers */
 .controllers{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 20px;

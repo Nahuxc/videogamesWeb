@@ -24,7 +24,7 @@
 
     <main>
 
-        <?php if(isset($_SESSION["user"])) :?>
+        <?php if(isset($_SESSION["user"]) || isset($_SESSION["complete"])) :?>
 
             <!-- section de videojuegos y controles para el usuario -->
             <?php  require_once "includes/sectGames/sectionGames.php" ?>

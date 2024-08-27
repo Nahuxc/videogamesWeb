@@ -19,12 +19,13 @@
                 <?php if(isset($_SESSION["user"])) : ?>
                 <!-- submenu categoria -->
                 <div id="submenuCategory" class="nav-list_category">
-                        <!-- categorias desde la base de datos -->
-                        <?php
-                        $category = getCategory($con); /* llamamos la funcion y la almacenamos en una variables */
-                        foreach ($category as $categoryAtr) : ?>
+                    <!-- categorias desde la base de datos -->
+                    <?php $category = getCategory($con); /* llamamos la funcion y la almacenamos en una variables */?>
+                    <?php if(!empty($category)) : ?>
+                        <?php foreach ($category as $categoryAtr) : ?>
                                 <a> <?= $categoryAtr["name"];?> </a>
                         <?php endforeach; ?>
+                    <?php endif;?>
                 </div>
 
                 <!-- nombre de usuario -->

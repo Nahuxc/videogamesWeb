@@ -13,41 +13,27 @@
                 <h2 class="title-user" >Bienvenido, <?= $_SESSION["user"]["name"] ?> </h2>
                 <?php endif;?>
                 <!-- cards -->
-                <div class="card-games">
-                    <div class="card-games-post">
-                        <h2>God of War</h2>
-                        <p>decripcion</p>
-                        <p>date:23-24-02</p>
-                    </div>
-                    <div class="card-games-user">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Martin</p>
-                    </div>
-                </div>
-                <!-- cards -->
-                <div class="card-games">
-                    <div class="card-games-post">
-                        <h2>Fifa 24</h2>
-                        <p>decripcion</p>
-                        <p>date:23-24-02</p>
-                    </div>
-                    <div class="card-games-user">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Franco</p>
-                    </div>
-                </div>
-                <!-- cards -->
-                <div class="card-games">
-                    <div class="card-games-post">
-                        <h2>GTA V</h2>
-                        <p>decripcion</p>
-                        <p>date:23-24-02</p>
-                    </div>
-                    <div class="card-games-user">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Juan carlos</p>
-                    </div>
-                </div>
+                 <?php $inputs = getInputs($con);?>
+                <?php if(!empty($inputs)):?>
+               
+                        <?php foreach($inputs as $input) :?>
+                                <div class="card-games">
+                                    <div class="card-games-post">
+                                        <h2><?= $input["title"]; ?></h2>
+                                        <span><?= "Categoria - ".$input["category"] ?></span>
+                                        <p><?= $input["description"]; ?></p>
+                                        <span><?= "Publicado - ".$input["date"]; ?></span>
+                                    </div>
+                                    <div class="card-games-user">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p><?= $input["username"]; ?> </p>
+                                    </div>
+                                </div>
+                        <?php endforeach;?>
+                    
+               
+                <?php endif;?>
+
             </div>
             <?php require_once "boxgames.php"?>
         </section>
