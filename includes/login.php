@@ -5,6 +5,11 @@ require_once "../db/connection.php";
 
 if(isset($_POST["loginSubmit"])){
 
+    /* borra los datos del formulario mal enviado */
+    if(isset($_SESSION["error_login"]) ){
+        session_unset();
+    }
+
 
     /* obtener datos del formulario */
     $email = trim($_POST["email"]);
@@ -23,30 +28,16 @@ if(isset($_POST["loginSubmit"])){
 
         $verifyUser = password_verify($password, $user["password"]); /* comparamos con la contraseña ingresada para ver si coincide con la del usuario */
 
-        if($verifyUser){
+        if($verifyUser && $user["email"] == $email){
             $_SESSION["user"] = $user;
 
-            if(isset($_SESSION["error_login"]) ){
-                session_unset($_SESSION["error_login"]);
-            }
-
-            
-
         }else{
-            $_SESSION["error_login"] = "login incorrecto";
+            $_SESSION["error_login"] = "el email o contraseña es incorrecto";
         }
 
     }else{
-        $_SESSION["error_login"] = "login incorrecto";
+        $_SESSION["error_login"] = "login incorrecto o el usuario no existe";
     }
-
-    
-
-    /* utilizar una sesion para guardar los datos del usuario logeado */
-
-    /* si algo falla enviar una sesion con el fallo */
-
-   
 
 
 }

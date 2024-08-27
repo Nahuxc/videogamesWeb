@@ -1,5 +1,5 @@
 <!-- conexion a la db -->
-<?php require_once "./db/connection.php" ?>
+<?php require_once "db/connection.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">

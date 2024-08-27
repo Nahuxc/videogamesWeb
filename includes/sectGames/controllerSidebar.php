@@ -1,10 +1,9 @@
         <div class="box-controllers">
-
                 <!-- contendor de los botones -->
                 <div class="controllers">
-                    <button class="btnJoystick c">□</button><span> Crear Categoria</span>
-                    <button class="btnJoystick t">△</button><span> Crear Entradas</span>
-                    <button class="btnJoystick cir">o</button><span> Configuracion</span>
-                    <button class="btnJoystick x">x</button><span> Cerrar sesion</span>
+                    <a href="#" class="btnJoystick c">□</a><span> Crear Categoria</span>
+                    <a href="#" class="btnJoystick t">△</a><span> Crear Entradas</span>
+                    <a href="#" class="btnJoystick cir">0</a><span> Configuracion</span>
+                    <a href="includes/logout.php" class="btnJoystick x">x</a><span> Cerrar sesion</span>
                 </div>
             </div>

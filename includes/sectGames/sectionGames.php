@@ -14,39 +14,40 @@
                 <?php endif;?>
                 <!-- cards -->
                 <div class="card-games">
-                    <h2>God of War</h2>
-                    <p>decripcion</p>
-                    <p>date:23-24-02</p>
+                    <div class="card-games-post">
+                        <h2>God of War</h2>
+                        <p>decripcion</p>
+                        <p>date:23-24-02</p>
+                    </div>
+                    <div class="card-games-user">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Martin</p>
+                    </div>
                 </div>
                 <!-- cards -->
                 <div class="card-games">
-                    <h2>God of War</h2>
-                    <p>decripcion</p>
-                    <p>date:23-24-02</p>
+                    <div class="card-games-post">
+                        <h2>Fifa 24</h2>
+                        <p>decripcion</p>
+                        <p>date:23-24-02</p>
+                    </div>
+                    <div class="card-games-user">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Franco</p>
+                    </div>
                 </div>
                 <!-- cards -->
                 <div class="card-games">
-                    <h2>God of War</h2>
-                    <p>decripcion</p>
-                    <p>date:23-24-02</p>
-                    <p>categoria: accion</p>
+                    <div class="card-games-post">
+                        <h2>GTA V</h2>
+                        <p>decripcion</p>
+                        <p>date:23-24-02</p>
+                    </div>
+                    <div class="card-games-user">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Juan carlos</p>
+                    </div>
                 </div>
-                <!-- cards -->
-                <div class="card-games">
-                    <h2>God of War</h2>
-                    <p>decripcion</p>
-                    <p>date:23-24-02</p>
-                    <p>categoria: accion</p>
-                </div>
-                <!-- cards -->
-                <div class="card-games">
-                    <h2>God of War</h2>
-                    <p>decripcion</p>
-                    <p>date:23-24-02</p>
-                    <p>categoria: accion</p>
-                </div>
-
-                <!-- btn ver mas -->
-                <button>Ver todos los posteos</button>
             </div>
+            <?php require_once "boxgames.php"?>
         </section>

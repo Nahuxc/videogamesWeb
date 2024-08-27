@@ -58,16 +58,30 @@ body{
 
 .nav-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-list li{
+.nav-list .nav-list-navigation{
     list-style: none;
     font-size: 20px;
     margin: 0px 10px;
-    
 }
 
-.nav-list li a{
+.nav-list-btn{
+    color: white;
+    border: none;
+    background: none;
+    font-size: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+.nav-list-navigation a{
     text-decoration: none;
     color: white;
 }
@@ -78,7 +92,48 @@ body{
 }
 
 
+/* submenu category */
 
+.nav-list_category{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    background-color: hsla(0, 0%, 100%, 0.205);
+
+    position: absolute;
+    top: 80px;
+
+    font-size: 20px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.nav-list_category a{
+    list-style: none;
+    padding: 10px;
+    margin: 5px 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 1, 1);
+
+    box-shadow: 0 0 5px rgb(121, 120, 120);
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.nav-list_category a:hover{
+
+    background-color: rgb(220, 164, 248);
+    color: rgb(1, 1, 1);
+
+}
+
+.activeSubmenu{
+    visibility: visible;
+}
 
 
 
@@ -376,6 +431,7 @@ body{
 
     margin: 0 auto;
     padding: 20px;
+    overflow-y: scroll;
 }
 
 
@@ -383,6 +439,28 @@ body{
     font-size: 60px;
 }
 
+
+.card-games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    background-color: rgb(245, 241, 241);
+    margin: 10px;
+    padding: 10px;
+    
+    box-shadow: 0 0 5px rgb(118, 117, 117);
+}
+
+.card-games-post{
+    font-size: 20px;
+    width: 80%;
+}
+.card-games-user{
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+}
 
 .title-user{
     color: rgb(154, 106, 244);
@@ -412,7 +490,11 @@ body{
     box-shadow: 0 2px 10px rgb(246, 246, 246);
 }
 
+
+/* box games section */
+
 .box-games{
+
     background-color: white;
     color: black;
 
@@ -431,8 +513,15 @@ body{
 
 .games{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.games-content{
+    display: flex;
+    width: 150px;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
 }
 
 
@@ -446,6 +535,7 @@ body{
 
     font-size: 15px;
     padding: 10px 20px;
+    margin: 10px;
 
     border: none;
     border-radius: 20px;
@@ -459,10 +549,13 @@ body{
     box-shadow: 0 2px 10px rgb(246, 246, 246);
 }
 
-.games img{
-    width: 20%;
+.games-content img{
+    width: 100%;
 }
 
+
+
+/* sidebar Controllers */
 .controllers{
     display: flex;
     justify-content: center;
@@ -476,6 +569,7 @@ body{
 
 .btnJoystick{
     background-color: rgb(18, 18, 18);
+    
     font-size: 20px;
     padding: 10px 15px;
     margin: 0px 10px;
@@ -490,18 +584,22 @@ body{
 
 .c{
     color: rgb(251, 139, 245);
+    text-decoration: none;
 }
 
 .t{
     color: rgb(21, 218, 60);
+    text-decoration: none;
 }
 
 .x{
     color: rgb(3, 127, 252);
+    text-decoration: none;
 }
 
 .cir{
     color: rgb(238, 35, 35);
+    text-decoration: none;
 }
 
 .btnJoystick:hover{

@@ -3,6 +3,12 @@ const sectionHome = document.getElementById("home");
 
 const sectionForms = document.getElementById("home-forms");
 
+/* submenu category */
+
+const submenuCategory = document.getElementById("submenuCategory");
+const btnCategory = document.getElementById("btn-subCategory");
+
+
 /* boton del inicio / home */
 const btnStart = document.getElementById("home-btn");
 
@@ -15,24 +21,41 @@ const btnChangeSignUp = document.getElementById("changeSignup")
 const btnChangeLogin = document.getElementById("changeLogin")
 
 
-/* desaparecer el inicio para que aparezca el formulario */
-btnStart.addEventListener("click", ()=>{
-    sectionHome.classList.toggle("invisibleHome");
-    sectionForms.classList.toggle("homeformsVisibility");
-})
 
+
+if(submenuCategory){
+    btnCategory.addEventListener("click", ()=>{
+        console.log("funciona");
+        submenuCategory.classList.toggle("activeSubmenu");
+    })
+}
+
+
+/* desaparecer el inicio para que aparezca el formulario */
+if(sectionHome && sectionForms){
+    btnStart.addEventListener("click", ()=>{
+
+            sectionHome.classList.toggle("invisibleHome");
+            sectionForms.classList.toggle("homeformsVisibility");
+            
+            
+        })
+    
+}
 
 /* cambios de formularios */
 
+if(formSignUp && formLogin){
+    /* cambiar al formulario de registro */
+    btnChangeSignUp.addEventListener("click", ()=>{
+        formSignUp.classList.toggle("visibleSignup")
+        formLogin.classList.toggle("invisibleLogin")
+    })
+    
+    /* cambiar al formulario de login */
+    btnChangeLogin.addEventListener("click", ()=>{
+        formSignUp.classList.remove("visibleSignup")
+        formLogin.classList.remove("invisibleLogin")
+    })
+}
 
-/* cambiar al formulario de registro */
-btnChangeSignUp.addEventListener("click", ()=>{
-    formSignUp.classList.toggle("visibleSignup")
-    formLogin.classList.toggle("invisibleLogin")
-})
-
-/* cambiar al formulario de login */
-btnChangeLogin.addEventListener("click", ()=>{
-    formSignUp.classList.remove("visibleSignup")
-    formLogin.classList.remove("invisibleLogin")
-})
