@@ -5,32 +5,32 @@
 
                 <!-- inicio del formulario -->
                 <div class="form-signup-init">
-                    <h2>Sign up</h2>
+                    <h2>Registrarse</h2>
                     <img src="./assets/img/logo.png" alt="">
-                    <p>if you have account <button id="changeLogin" class="btn-change">click here</button></p>
+                    <p>Si ya tienes una cuenta <button id="changeLogin" class="btn-change">click Aqui</button></p>
                 </div>
                 <hr>
 
                 <!-- formulario -->
                 <form action="includes/signup.php" method="POST" class="form-signup" >
-                    <label>Name:</label>
-                    <input placeholder="Name" name="name" type="text">
+                    <label>Nombre:</label>
+                    <input placeholder="Nombre" name="name" type="text">
                     <?php echo isset($_SESSION["errors"]) ?  showError($_SESSION["errors"], "name") : ""; ?>
 
-                    <label>Surname:</label>
-                    <input placeholder="Surname" name="surname" type="text">
+                    <label>Apellido:</label>
+                    <input placeholder="Apellido" name="surname" type="text">
                     <?php echo isset($_SESSION["errors"]) ? showError($_SESSION["errors"], "surname") : ""; ?>
 
                     <label>Email:</label>
                     <input placeholder="Email" name="email" type="email">
                     <?php echo isset($_SESSION["errors"]) ? showError($_SESSION["errors"], "email") : ""; ?>
 
-                    <label>Password: </label>
-                    <input placeholder="Password" name="password" type="password">
+                    <label>Contraseña: </label>
+                    <input placeholder="Contraseña" name="password" type="password">
                     <?php echo isset($_SESSION["errors"]) ? showError($_SESSION["errors"], "password") : ""; ?>
 
 
-                    <input class="btn-submit" name="submit" value="Sign Up" type="submit">
+                    <input class="btn-submit" name="submit" value="Registrarse" type="submit">
                 </form>
                 <?php deleteErrors(); ?>
                 

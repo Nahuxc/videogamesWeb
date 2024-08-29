@@ -32,8 +32,8 @@
              </div>
             <!-- navegacion --> 
             <ul class="nav-list">
-                <li class="nav-list-navigation"><i class="fa-solid fa-house"></i><a href="./index.php"> Home</a></li>
-                <button id="btn-subCategory" class="nav-list-btn" ><i class="fa-solid fa-inbox"></i> Category</button>
+                <li class="nav-list-navigation"><i class="fa-solid fa-house"></i><a href="./index.php"> Inicio</a></li>
+                <button id="btn-subCategory" class="nav-list-btn" ><i class="fa-solid fa-inbox"></i> Categorias</button>
 
 
 

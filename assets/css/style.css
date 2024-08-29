@@ -419,9 +419,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-
-    height: 75vh;
+    margin: 20px;
+    height: 80vh;
 }
 
 
