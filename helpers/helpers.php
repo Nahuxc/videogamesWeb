@@ -1,5 +1,5 @@
 
-<?php include_once "./db/connection.php"?>
+<?php include('db/connection.php');?>
 <?php
 
 
@@ -30,6 +30,23 @@ function getCategory($con){
     
 
 }
+
+
+
+/* funcion filtrador de categoria por nombre ingresado desde el formulario */
+function filterValueArrCategory($con, $valueForm){
+
+    $sql = "SELECT * FROM category;";
+    $category = mysqli_query($con, $sql);
+
+    foreach($category as $value){
+        if($value["name"] == $valueForm ){
+            $valueFilter = $value["name"];
+            return $valueFilter;
+        }
+    }
+}
+
 
 
 /* obtener inputs */
@@ -63,6 +80,10 @@ function alertErrorSpam(){
 
 
 function deleteErrors(){
+
+    if(isset($_SESSION["errors_category"])){
+        $_SESSION["errors_category"] = null;
+    }
 
     if(isset($_SESSION["errors_inputs"])){
         $_SESSION["errors_inputs"] = null;

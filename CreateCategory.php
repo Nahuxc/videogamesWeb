@@ -15,8 +15,10 @@
                 <form action="./actions/save-category.php" method="POST" class="form-login">
                     <label>Nombre de la categoria:</label>
                     <input name="name" type="text">
+                    <?php echo isset($_SESSION["errors_category"]) ? showError($_SESSION["errors_category"], "name") : ""; ?>
                     <input class="btn-submit" name="createSubmit" value="Crear categoria" type="submit">
                 </form>
+                <?php deleteErrors(); ?>
             </div>
 </section>
 
