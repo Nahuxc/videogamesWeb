@@ -99,7 +99,7 @@ body{
     flex-wrap: wrap;
     overflow: auto;
 
-    background-color: hsla(0, 0%, 100%, 0.205);
+    background-color: hsla(0, 0%, 100%, 0.996);
 
     position: absolute;
     top: 80px;
@@ -107,9 +107,11 @@ body{
     font-size: 20px;
 
     padding: 20px;
+    margin: 10px;
 
     border-radius: 20px;
     visibility: hidden;
+    box-shadow: 0 0 5px rgb(121, 120, 120);
 }
 
 .nav-list_category a{
@@ -420,10 +422,17 @@ body{
     justify-content: center;
     align-items: center;
     margin: 20px;
-    height: 80vh;
 }
 
 
+
+.createInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
 
 
 

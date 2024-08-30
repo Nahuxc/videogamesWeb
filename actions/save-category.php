@@ -25,7 +25,9 @@ if($_POST["createSubmit"]){
     if(count($errors) == 0){
         $sql = "INSERT INTO category VALUES(null, '$name')";
         $saveQuery = mysqli_query($con, $sql);
-    }   
+    }else{
+        $_SESSION["errors_category"] = $errors;
+    }
 
 
     /* falta hacer comprobacion si ya existe el nombre de la categoria a crear */

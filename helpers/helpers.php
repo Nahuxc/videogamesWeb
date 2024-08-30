@@ -1,5 +1,5 @@
 
-<?php require_once "./db/connection.php";?>
+<?php include_once "./db/connection.php"?>
 <?php
 
 
@@ -35,7 +35,7 @@ function getCategory($con){
 /* obtener inputs */
 
 function getInputs($con){
-    $sql = "SELECT i.*, c.name as 'category', u.name as 'username' FROM inputs i INNER JOIN category c ON i.category_id = c.id INNER JOIN users u ON i.user_id = u.id";
+    $sql = "SELECT i.*, c.name as 'category', u.name as 'username' FROM inputs i INNER JOIN category c ON i.category_id = c.id INNER JOIN users u ON i.user_id = u.id ORDER BY date DESC";
 
     $inputs = mysqli_query($con, $sql);
 
@@ -64,7 +64,9 @@ function alertErrorSpam(){
 
 function deleteErrors(){
 
-
+    if(isset($_SESSION["errors_inputs"])){
+        $_SESSION["errors_inputs"] = null;
+    }
 
     if(isset($_SESSION["errors"])){
         $_SESSION["errors"] = null;
