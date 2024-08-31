@@ -81,12 +81,19 @@ function alertErrorSpam(){
 
 function deleteErrors(){
 
+    if(isset($_SESSION["update"])){
+        $_SESSION["update"] = null;
+        session_unset();
+    }
+
     if(isset($_SESSION["errors_category"])){
         $_SESSION["errors_category"] = null;
+        session_unset();
     }
 
     if(isset($_SESSION["errors_inputs"])){
         $_SESSION["errors_inputs"] = null;
+        session_unset();
     }
 
     if(isset($_SESSION["errors"])){

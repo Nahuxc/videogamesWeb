@@ -3,7 +3,7 @@
 
 <section class="createCategory">
             <?php require_once "./includes/sectGames/controllerSidebar.php"?>
-            <div id="box-login" class="box-login">
+            <div class="box-login">
                 <!-- formulario de creacion de categorias / con los estilos del formulario de login -->
                 <div class="form-login-init">
                     <h2>Crear Categoria</h2>

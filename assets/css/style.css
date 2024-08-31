@@ -325,6 +325,9 @@ body{
     font-size: 30px;
 }
 
+
+
+
 .form-signup label{
     font-size: 20px;
 }
@@ -434,15 +437,98 @@ body{
     margin: 20px;
 }
 
+.userData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.box-user{
+    background-color: white;
+    color: black;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.form-user-init{
+    align-items: center;
+    padding: 20px;
+}
+
+.form-user-init-content{
+    text-align: center;
+    margin: 20px;
+}
+
+.form-user-init-content h2{
+    font-size: 50px;
+    margin: 10px 0px;
+}
+
+.form-user-init-content i{
+    font-size: 80px;
+    margin: 10px 0px;
+}
 
 
+.form-user-init-content-2{
+    background-color: #f7f6f6;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgb(181, 179, 179);
+}
+
+.form-user-init-content-2 p{
+    color: rgb(101, 100, 100);
+}
+
+.form-user-init p{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.form-user{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 20px 30px;
+
+}
+
+.form-user label{
+    font-size: 20px;
+}
 
 
+.form-user input{
+    border: none;
+    background-color: #e6e3e3;
+    padding: 10px 15px;
+}
 
 
+.form-user .btn-submit{
+    background-color: rgb(130, 15, 191);
+    color: white;
+
+    font-size: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 
-
+.alert-green{
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
 
 
 
