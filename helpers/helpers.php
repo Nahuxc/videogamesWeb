@@ -32,6 +32,21 @@ function getCategory($con){
 }
 
 
+function getCategoryName($con, $id){
+    $sql = "SELECT * FROM category WHERE id = '$id'";
+    $category = mysqli_query($con, $sql);
+
+    $result = array();
+    if($category && mysqli_num_rows($category) >= 1){
+        $result = mysqli_fetch_assoc($category);
+    }
+    
+    return $result;
+    
+
+}
+
+
 
 /* funcion filtrador de categoria por nombre ingresado desde el formulario */
 function filterValueArrCategory($con, $valueForm){
@@ -51,8 +66,22 @@ function filterValueArrCategory($con, $valueForm){
 
 /* obtener inputs */
 
-function getInputs($con){
-    $sql = "SELECT i.*, c.name as 'category', u.name as 'username' FROM inputs i INNER JOIN category c ON i.category_id = c.id INNER JOIN users u ON i.user_id = u.id ORDER BY date DESC";
+function getInputs($con, $limit = null, $category = null){
+    $sql = "SELECT i.*, c.name as 'category', u.name as 'username' FROM inputs i INNER JOIN category c ON i.category_id = c.id INNER JOIN users u ON i.user_id = u.id";
+
+
+
+    if(!empty($category)){
+        $sql .= " WHERE i.category_id = '$category' ";
+    }
+
+    $sql .= " ORDER BY i.id DESC";
+
+    if($limit){
+        $sql .= " LIMIT 3";
+    }
+    
+
 
     $inputs = mysqli_query($con, $sql);
 

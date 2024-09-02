@@ -44,7 +44,7 @@
                     <?php $category = getCategory($con); /* llamamos la funcion y la almacenamos en una variables */?>
                     <?php if(!empty($category)) : ?>
                         <?php foreach ($category as $categoryAtr) : ?>
-                                <a> <?= $categoryAtr["name"];?> </a>
+                                <a href="category.php?id=<?= $categoryAtr["id"] ?> "> <?= $categoryAtr["name"];?> </a>
                         <?php endforeach; ?>
                     <?php endif;?>
                 </div>

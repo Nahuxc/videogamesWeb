@@ -76,6 +76,7 @@ body{
     font-family: "New Amsterdam", sans-serif;
     font-weight: 400;
     font-style: normal;
+    cursor: pointer;
 }
 
 
@@ -115,6 +116,7 @@ body{
 }
 
 .nav-list_category a{
+    text-decoration: none;
     list-style: none;
     padding: 10px;
     margin: 5px 5px;
@@ -449,8 +451,8 @@ body{
     background-color: white;
     color: black;
     margin: 20px;
+    padding: 5px 50px;
     border-radius: 10px;
-    width: 30%;
 }
 
 .form-user-init{
@@ -542,6 +544,10 @@ body{
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.box-post-games-title span{
+    color: #a62dfd;
 }
 
 .box-post-games{
