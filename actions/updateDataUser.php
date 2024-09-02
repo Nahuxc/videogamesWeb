@@ -42,39 +42,40 @@ if(isset($_POST)){
 
 
         $user = $_SESSION["user"];
+        /* comprobar si el email ya existe */
 
+        $sql = "SELECT id, email FROM users WHERE email = '$email';";
+        $isset_email = mysqli_query($con, $sql);
+        $isset_user = mysqli_fetch_assoc($isset_email);
 
-            $sql = "UPDATE users SET".
-                   " name = '$name', ".
-                   " surname = '$surname', ".
-                   " email = '$email' ".
-                   "WHERE id = ".$user["id"];
-            $saveUser = mysqli_query($con, $sql);
-       
+        if($isset_user["id"] == $user["id"] || empty($isset_user) ){
+                $sql = "UPDATE users SET".
+                       " name = '$name', ".
+                       " surname = '$surname', ".
+                       " email = '$email' ".
+                       "WHERE id = ".$user["id"];
+                $saveUser = mysqli_query($con, $sql);
+                /* verificacion de que existen los datos y se registraron correctamente */
+                if($saveUser){
+                    $_SESSION["user"]["name"] = $name;
+                    $_SESSION["user"]["surname"] = $surname;
+                    $_SESSION["user"]["email"] = $email;
+        
+                    $_SESSION["update"] = "<div class='alert-green' >"."se realizaron los cambios con exito"."</div>";
+        
+                    header("Location:../userData.php");
+        
+                }else{
+                    $_SESSION["errors"] = "fallo al guardar el usuario";
+                }
 
-
-        /* verificacion de que existen los datos y se registraron correctamente */
-        if($saveUser){
-            $_SESSION["user"]["name"] = $name;
-            $_SESSION["user"]["surname"] = $surname;
-            $_SESSION["user"]["email"] = $email;
-
-            $_SESSION["update"] = "<div class='alert-green' >"."se realizaron los cambios con exito"."</div>";
-
-            header("Location:../userData.php");
-
+            }else{
+                $_SESSION["errors"] = $errors;
+                header("Location:../userData.php");
+            }
         }else{
-            $_SESSION["errors"] = "fallo al guardar el usuario";
+            $_SESSION["errors"]["general"] = "ese mail ya esta registrado";
         }
-
-
-
-
-
-    }else{
-        $_SESSION["errors"] = $errors;
-        header("Location:../userData.php");
-    }
 
 
 
