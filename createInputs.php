@@ -24,6 +24,7 @@
                     <?php echo isset($_SESSION["errors_inputs"]) ? showError($_SESSION["errors_inputs"], "description") : ""; ?>
 
                     <label>Tipo de categoria:</label>
+                    <!-- obtener las categorias con su nombre y id -->
                     <?php if(isset($category)) :?>
                     <select name="category">
                         <?php $category = getCategory($con); ?>

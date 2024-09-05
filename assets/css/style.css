@@ -534,6 +534,80 @@ body{
 
 
 
+/* content views post/inputs */
+.box-view-post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.view-content{
+    background-color: white;
+    color: rgb(37, 35, 35);
+
+    height: 70vh;
+    width: 50%;
+
+    border-radius: 20px;
+
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.view-content .title{
+    font-size: 50px;
+}
+
+.view-content .box-description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    background-color: rgb(245, 241, 241);
+    margin: 10px;
+    padding: 10px;
+    
+    box-shadow: 0 0 5px rgb(118, 117, 117);
+}
+
+.view-btnBack{
+    margin: 20px 0px;
+}
+
+
+.box-description{
+    font-size: 20px;
+}
+
+.box-description p{
+    margin: 15px 0px;
+}
+
+.box-description span{
+    color: rgb(133, 12, 190);
+}
+
+.box-description a{
+    text-decoration: none;
+    background-color: rgb(154, 106, 244);
+    color: white;
+
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: all 300ms;
+}
 
 
 /* section games */
@@ -588,11 +662,24 @@ body{
 }
 
 .card-games-post p{
+    margin: 10px 0px;
     color: rgb(80, 79, 79);
 }
 
 .card-games-post span{
     color: rgb(133, 12, 190);
+}
+
+.box-link{
+    margin: 10px 0px;
+}
+
+.card-games-post a{
+    border-radius: 10px;
+    background-color: #9f2df1;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
 }
 
 .card-games-user{

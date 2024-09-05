@@ -23,7 +23,9 @@
                                         <span><?= "Categoria - ".$input["category"] ?></span>
                                         <p><?= substr($input["description"], 0, 120)." . . ."  ?></p>
                                         <span><?= "Publicado - ".$input["date"]; ?></span>
-                                        <a href="#">Ver Mas Contenido</a>
+                                        <div class="box-link" >
+                                            <a href="post.php?id=<?= $input["id"] ?>">Ver Mas Contenido</a>
+                                        </div>
                                     </div>
                                     <div class="card-games-user">
                                         <i class="fa-solid fa-user"></i>

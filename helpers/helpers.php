@@ -1,5 +1,5 @@
 
-<?php include('db/connection.php');?>
+<?php include_once('db/connection.php');?>
 <?php
 
 
@@ -91,6 +91,24 @@ function getInputs($con, $limit = null, $category = null){
         $result = $inputs;
         return $result;
     }
+
+
+}
+
+/* obtener datos de la entrada por id */
+
+
+function getInputId($con, $id){
+    $sql = "SELECT i.*, c.name AS 'category' FROM inputs i INNER JOIN category c ON i.category_id = c.id WHERE i.id = '$id'";
+    $input = mysqli_query($con, $sql);
+
+    $result = array();
+
+    if($input && mysqli_num_rows($input) >= 1){
+        $result = mysqli_fetch_assoc($input);
+    }
+
+    return $result;
 
 
 }
