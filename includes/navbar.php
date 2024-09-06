@@ -30,11 +30,11 @@
              <div class="box-search" >
                  <i class="fa-solid fa-magnifying-glass"></i><input class="search" type="search">
              </div>
-            <!-- navegacion --> 
+
+            <!-- navegacion -->
             <ul class="nav-list">
                 <li class="nav-list-navigation"><i class="fa-solid fa-house"></i><a href="./index.php"> Inicio</a></li>
                 <button id="btn-subCategory" class="nav-list-btn" ><i class="fa-solid fa-inbox"></i> Categorias</button>
-
 
 
                 <?php if(isset($_SESSION["user"])) : ?>
