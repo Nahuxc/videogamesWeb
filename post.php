@@ -27,8 +27,15 @@ if(!isset($input_id["id"])){
                   <span>Categoria: <?= $input_id["category"] ?></span>
                   <p><?= $input_id["description"] ?></p>
                   <span>Publicado - <?= $input_id["date"] ?> </span>
+                  
+                  <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $input_id["user_id"]):?>
+                    <div class="btn-mod">
+                      <a href="actions/edit-post.php" class="blue">Editar</a>
+                      <a href="actions/delete-post.php?id=<?= $input_id["id"] ?>" class="red">Borrar</a>
+                    </div>
+                  <?php endif;?>
                   <div class="view-btnBack">
-                    <a href="index.php">Volver Al Inicio</a>
+                    <a href="index.php"><i class="fa-solid fa-arrow-left"></i></a>
                   </div>
               </div>
         </div>

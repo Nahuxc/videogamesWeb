@@ -20,13 +20,13 @@
                     <?php echo isset($_SESSION["errors_inputs"]) ? showError($_SESSION["errors_inputs"], "title") : ""; ?>
 
                     <label>Descripcion:</label>
-                    <textarea name="description" ></textarea>
+                    <textarea class="input-description" cols="60" rows="8" name="description" ></textarea>
                     <?php echo isset($_SESSION["errors_inputs"]) ? showError($_SESSION["errors_inputs"], "description") : ""; ?>
 
                     <label>Tipo de categoria:</label>
                     <!-- obtener las categorias con su nombre y id -->
                     <?php if(isset($category)) :?>
-                    <select name="category">
+                    <select class="input-category" name="category">
                         <?php $category = getCategory($con); ?>
                         <?php foreach($category as $values) : ?>
                             <option value="<?= $values["id"] ?>"><?= $values["name"] ?>  </option>

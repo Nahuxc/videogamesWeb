@@ -50,7 +50,7 @@
                 </div>
 
                 <!-- nombre de usuario -->
-                <li id="user_log" class="nav-list-navigation login-active"><i class="fa-solid fa-user"></i> <?= $_SESSION["user"]["name"]; ?> </li>
+                <a href="userData.php" id="user_log" class="nav-list-navigation login-active"><i class="fa-solid fa-user"></i> <?= $_SESSION["user"]["name"]; ?> </a>
                 <?php endif;?>
             </ul>
         </nav>
