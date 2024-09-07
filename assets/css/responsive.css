@@ -1,0 +1,128 @@
+
+@media only screen and (max-width: 750px) {
+    header{
+        width: 100%;
+        top: 0;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .box-controllers{
+        margin-top: 120px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+
+    .nav-sidebar{
+        background-color: #6f08af;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        z-index: 1000;
+    }
+    
+    .nav-submenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -800px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        background: #3f0264;
+        font-size: 20px;
+    
+        z-index: -1;
+        transition: all 1s;
+    }
+    
+    
+    .activeSidebar{
+        top: 100px;
+    }
+    
+    .nav-submenu-user{
+        background-color: white;
+        padding: 10px;
+        color: black;
+    }
+    .nav-submenu-user a{
+        color: black;
+        text-shadow: none;
+    }
+    
+    .nav-submenu-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    
+    .nav-submenu-list li{
+        padding: 10px 0px;
+        transition: all 300ms;
+    }
+    
+    .nav-submenu-list li:hover{
+        background-color: #6f08af;
+    }
+    
+    .nav-submenu-list a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    
+    
+    
+    .btn-sidebar{
+        border: none;
+        font-size: 20px;
+        margin-right: 10px;
+        padding: 5px 10px;
+        background-color: rgb(97, 96, 96);
+        color: white;
+        border-radius: 5px;
+    }
+    
+    
+    
+    .box-user{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+        gap: 0;
+    }
+
+    .box-login{
+        width: 100%;
+    }
+
+
+    .home span{
+        margin-top: 150px;
+        font-size: 5vmin;
+    }
+
+    .home-btn{
+        font-size: 40px;
+    }
+
+    .homeformsVisibility{
+        margin-top: 200px;
+        z-index: 1;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .card-games{
+        flex-wrap: wrap;
+    }
+}

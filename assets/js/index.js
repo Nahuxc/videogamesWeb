@@ -8,6 +8,13 @@ const sectionForms = document.getElementById("home-forms");
 const submenuCategory = document.getElementById("submenuCategory");
 const btnCategory = document.getElementById("btn-subCategory");
 
+/* sidebar active */
+
+const btnsidebar = document.querySelector(".btn-sidebar");
+
+const sidebar = document.getElementById("sidebar");
+
+
 
 /* boton del inicio / home */
 const btnStart = document.getElementById("home-btn");
@@ -21,6 +28,12 @@ const btnChangeSignUp = document.getElementById("changeSignup")
 const btnChangeLogin = document.getElementById("changeLogin")
 
 
+
+if(btnsidebar){
+    btnsidebar.addEventListener("click", ()=>{
+        sidebar.classList.toggle("activeSidebar");
+    })
+}
 
 
 if(submenuCategory){
