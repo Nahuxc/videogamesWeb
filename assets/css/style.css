@@ -560,6 +560,18 @@ body{
 
 
 
+/* edit Post section */
+
+.editPost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+
 /* content views post/inputs */
 .box-view-post{
     display: flex;

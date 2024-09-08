@@ -25,16 +25,16 @@
 <header class="header">
 
 
-<!-- NAVBAR -->
-<nav class="nav">
+        <!-- NAVBAR -->
+        <nav class="nav">
             <!-- logo -->
             <div class="nav-logo">
                 <img src="./assets/img/logo.png" alt="">
             </div>
             <!-- buscador -->
-             <div class="box-search" >
+             <form action="actions/search.php" class="box-search" >
                  <i class="fa-solid fa-magnifying-glass"></i><input class="search" type="search">
-             </div>
+             </form>
 
             <!-- navegacion -->
             <ul class="nav-list">
@@ -61,18 +61,8 @@
         </nav>
 
 
-
-
-
-
-
-
-
-
-
-<!-- sidebar -->
-
-<nav class="nav-sidebar">
+        <!-- sidebar -->
+        <nav class="nav-sidebar">
             <!-- logo -->
             <div class="nav-logo">
                 <img src="./assets/img/logo.png" alt="">
@@ -102,6 +92,7 @@
                 </ul>
             </div>
         </nav>
+
 </header>
 
 

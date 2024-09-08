@@ -30,7 +30,7 @@ if(!isset($input_id["id"])){
                   
                   <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $input_id["user_id"]):?>
                     <div class="btn-mod">
-                      <a href="actions/edit-post.php" class="blue">Editar</a>
+                      <a href="edit-post.php?id=<?= $input_id["id"] ?>" class="blue">Editar</a>
                       <a href="actions/delete-post.php?id=<?= $input_id["id"] ?>" class="red">Borrar</a>
                     </div>
                   <?php endif;?>

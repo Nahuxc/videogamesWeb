@@ -27,14 +27,29 @@ if(isset($_POST)){
     }
 
     if(count($errors) == 0){
-        /* insertar en la base de datos */
-        $sql = "INSERT INTO inputs VALUES( 'NULL', $user_id, $category_id, '$title', '$description', CURDATE());";
+
+        if(isset($_GET["edit"])){
+
+            $input_id = $_GET["edit"];
+
+
+            $sql = "UPDATE inputs SET title='$title', description='$description', category_id='$category_id' WHERE id= $input_id AND user_id= $user_id ";
+        }else{
+            /* insertar en la base de datos */
+            $sql = "INSERT INTO inputs VALUES( 'NULL', $user_id, $category_id, '$title', '$description', CURDATE());";
+        }
         $query = mysqli_query($con, $sql);
+
         header("location:../index.php");
     }else {
-        var_dump($errors);
         $_SESSION["errors_inputs"] = $errors;
-        header("location:../createInputs.php");
+
+        if($_GET["edit"]){
+            header("location:../edit-post.php?id".$_GET["edit"]);
+        }else{
+            header("location:../createInputs.php");
+        }
+
     }
 
 
