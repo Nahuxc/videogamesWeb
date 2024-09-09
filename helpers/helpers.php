@@ -66,7 +66,7 @@ function filterValueArrCategory($con, $valueForm){
 
 /* obtener inputs */
 
-function getInputs($con, $limit = null, $category = null){
+function getInputs($con, $limit = null, $category = null, $search = null){
     $sql = "SELECT i.*, c.name as 'category', u.name as 'username' FROM inputs i INNER JOIN category c ON i.category_id = c.id INNER JOIN users u ON i.user_id = u.id";
 
 
@@ -74,6 +74,11 @@ function getInputs($con, $limit = null, $category = null){
     if(!empty($category)){
         $sql .= " WHERE i.category_id = '$category' ";
     }
+
+    if(!empty($search)){
+        $sql .= " WHERE i.title LIKE '%$search%' ";
+    }
+
 
     $sql .= " ORDER BY i.id DESC";
 
@@ -112,6 +117,8 @@ function getInputId($con, $id){
 
 
 }
+
+
 
 
 

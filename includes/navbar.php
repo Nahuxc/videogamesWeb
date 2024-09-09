@@ -32,8 +32,9 @@
                 <img src="./assets/img/logo.png" alt="">
             </div>
             <!-- buscador -->
-             <form action="actions/search.php" class="box-search" >
-                 <i class="fa-solid fa-magnifying-glass"></i><input class="search" type="search">
+             <form action="search.php" method="POST" class="box-search" >
+                 <input class="btn-search" type="submit" value="Buscar" >
+                 <input class="search" type="text" name="search">
              </form>
 
             <!-- navegacion -->
@@ -67,9 +68,11 @@
             <div class="nav-logo">
                 <img src="./assets/img/logo.png" alt="">
             </div>
-            <div class="box-search" >
-                 <i class="fa-solid fa-magnifying-glass"></i><input class="search" type="search">
-             </div>
+            <!-- buscador -->
+            <form action="search.php" method="POST" class="box-search" >
+                 <input class="btn-search" type="submit" value="Buscar" >
+                 <input class="search" type="text" name="search">
+             </form>
             <button class="btn-sidebar">x</button>
             <div id="sidebar" class="nav-submenu">
                 <div class="nav-submenu-user">
